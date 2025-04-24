@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import "./stylo.css"
 const FormYugi = ({ obtener }) => {
 
     const [form, setForm] = useState({ carta:"" })
@@ -16,7 +17,8 @@ const FormYugi = ({ obtener }) => {
         setForm({ carta: ""})
     }
     return (
-        <div>
+        <div className='formulario'>
+            <h2>Buscar carta</h2>
 
 
 

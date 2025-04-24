@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { helpHttp } from '../../helpers/helpHttp'
-import FormYugi from './FormYugi'
+import FormYugi from './FormYugi/FormYugi'
 import Yugi from './Yugi'
 const Vistayugi = () => {
    const [dato, setDato] = useState({ carta: null })

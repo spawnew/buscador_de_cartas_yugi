@@ -1,4 +1,4 @@
-import Navbar from './Componentes/Navbar'
+import Navbar from './Componentes/Navbar/Navbar'
 import './App.css'
 import Vistayugi from './Componentes/Vistayugi'
 function App() {
