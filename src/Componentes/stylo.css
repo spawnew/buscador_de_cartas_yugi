@@ -1,0 +1,31 @@
+.contenedor-cartas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.carta {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.carta img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.carta h2 {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+}
