@@ -1,4 +1,4 @@
-
+import Navbar from './Componentes/Navbar'
 import './App.css'
 import Vistayugi from './Componentes/Vistayugi'
 function App() {
@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-     
+     <Navbar/>
       <Vistayugi/>
     </>
   )
