@@ -40,14 +40,16 @@ const Vistayugi = () => {
                ( yugi1.map((el) => (
                     <div className='carta' key={el.id}>
                        <Yugi nombre={el.name}
-                           img={el.card_images[0].image_url } /> 
+                           img={el.card_images[0].image_url} 
+                       precio={el.card_prices[0].coolstuffinc_price} />
                        
                     </div>
                 )))
             :(yugi1.filter((el) => el.name === dato.carta).map((el) => (
                 <div className='carta' key={el.id}>
                     <Yugi nombre={el.name}
-                           img={el.card_images[0].image_url } /> 
+                        img={el.card_images[0].image_url} 
+                        precio={el.card_prices[0].coolstuffinc_price} />
                 </div>
             )))}
     

@@ -6,12 +6,13 @@
 }
 
 .carta {
-    background-color: #f4f4f4;
+    background-color: #0f0c0c;
     border-radius: 8px;
     padding: 1rem;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    color:#070707;
 }
 
 .carta:hover {
@@ -28,4 +29,9 @@
     margin-top: 0.5rem;
     font-size: 1rem;
     color: #333;
+}
+.carta p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #070707;
 }
