@@ -2,19 +2,23 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 const Vistayugi = () => {
- 
+   const [dato, setDato] = useState({})
     const [yugi1, setyugi] = useState([])
  
+ 
+    const obtener = (dato) => {
+        setDato(dato)
+    }
     useEffect(() => {
 
         const fetchData = async () => {
 
-            if (!dato.artista)  return
-            const { artista, cancion } = dato
+            if (!dato.carta)  return
+            const { carta } = dato
             const yugiUrl = "https://db.ygoprodeck.com/api/v7/cardinfo.php"
             const api = helpHttp()
            
-            const [resbusqueda, resyugi] = await Promise.all([
+            const [, resyugi] = await Promise.all([
                 api.get(yugiUrl)
 
             ])
@@ -28,7 +32,9 @@ const Vistayugi = () => {
 
  
     return (
-    <div></div>
+        <div>
+            <FormYugi obtener={obtener} />
+    </div>
   )
 }
 
