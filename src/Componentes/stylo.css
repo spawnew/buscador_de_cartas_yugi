@@ -39,3 +39,12 @@
     font-size: 1rem;
     color: #070707;
 }
+.precio {
+    display:flex;
+    flex-direction: column;
+    font: 1em sans-serif;
+    color: #f3e8e8;
+    background-color: #0f0c0c;
+    font-weight: bold;
+   
+}
