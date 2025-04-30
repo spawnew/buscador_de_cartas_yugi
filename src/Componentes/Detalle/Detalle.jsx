@@ -2,7 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { helpHttp } from '../../../helpers/helpHttp'
+import { helpHttp } from '../../assets/helpers/helpHttp'
 import "./stylo.css"
 const Detalle = () => {
 
@@ -33,18 +33,18 @@ const Detalle = () => {
 
     return (
         <div className='detalleCarta'>
-            
+
             <h2>Detalles de la carta</h2>
             {yugi1.map((el) => (
-                <div  key={el.id}>
+                <div key={el.id}>
                     <div className='detalleCarta1'>
-                    <h2>{el.name}</h2>
-                    
+                        <h2>{el.name}</h2>
+
                         <img src={el.card_images[0].image_url} alt="" />
-                       
+
                         <p>{el.desc}</p>
-                        
-                         </div>
+
+                    </div>
                 </div>
             ))}
         </div>

@@ -2,7 +2,7 @@ import Navbar from './Componentes/Navbar/Navbar'
 import './App.css'
 import Vistayugi from './Componentes/Vistayugi'
 import { BrowserRouter, Routes, Route } from 'react-router'
-import Contacto from './Componentes/Contacto'
+import Contacto from './Componentes/Contacto/Contacto'
 import Detalle from './Componentes/Detalle/Detalle'
 function App() {
 

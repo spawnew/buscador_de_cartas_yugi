@@ -22,16 +22,18 @@
 }
 .botones{
     display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-   
+  flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+  align-items: space-around;
+    width: 100%;
+   
     background-color: #0f0c0c;
     color: #f3e8e8;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
-    font-size: 0.5em;
+    font-size: 0.3em;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 
@@ -43,4 +45,5 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     will-change: filter;
     transition: filter 300ms;
+    font: 0.5em sans-serif;
 }

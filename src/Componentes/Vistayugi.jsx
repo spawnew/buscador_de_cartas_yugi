@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { helpHttp } from '../../helpers/helpHttp'
+import { helpHttp } from '../assets/helpers/helpHttp'
 import FormYugi from './FormYugi/FormYugi'
 import Yugi from './Yugi'
 import { Link } from 'react-router'
@@ -38,13 +38,13 @@ const Vistayugi = () => {
             <FormYugi obtener={obtener} />
             <div className="contenedor-cartas">
                 {(dato.carta === null) ?
-                    (yugi1.slice(1,10).map((el) => (
+                    (yugi1.slice(1, 10).map((el) => (
                         <div className='carta' key={el.id}>
                             <Yugi nombre={el.name}
                                 img={el.card_images[0].image_url}
-                                precio={el.card_prices[0].coolstuffinc_price} 
-                                precio2={el.card_prices[0].ebay_price}    
-                                precio3={el.card_prices[0].tcgplayer_price} 
+                                precio={el.card_prices[0].coolstuffinc_price}
+                                precio2={el.card_prices[0].ebay_price}
+                                precio3={el.card_prices[0].tcgplayer_price}
                             />
                             <Link to={`/detalle/${el.id}`}  >
                                 <button className='boton'>Detalle</button>
@@ -56,7 +56,7 @@ const Vistayugi = () => {
                             <Yugi nombre={el.name}
                                 img={el.card_images[0].image_url}
                                 precio={el.card_prices[0].coolstuffinc_price} />
-                                
+
                         </div>
                     )))}
 

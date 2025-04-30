@@ -11,10 +11,11 @@ const Navbar = () => {
       <Link to= "/contacto">
         <button className='boton'><p>Contacto</p></button>
       </Link>
-      </div>
+      
         <button className='boton'><p>Sobre nosotros</p></button>
       </div>
-    </div>
+      </div>
+   
   )
 }
 
