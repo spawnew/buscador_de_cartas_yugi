@@ -5,14 +5,14 @@ const Navbar = () => {
   return (
     <div className='navbar'>
       <h1>Imperio YUGIOH</h1>
-      <h3>Buscador de cartas</h3>
+      <h2>Buscador de cartas</h2>
       
       
       <Link to= "/contacto">
-        <button>Contacto</button>
+        <button><p>Contacto</p></button>
       </Link>
       
-      <button>Sobre nosotros</button>
+      <button><p>Sobre nosotros</p></button>
     </div>
   )
 }

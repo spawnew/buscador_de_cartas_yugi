@@ -8,9 +8,11 @@
 .carta {
     background-color: #0f0c0c;
     border-radius: 8px;
+    border-color: blue;
+    border: 1px solid #0a48f3;
     padding: 1rem;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(55, 2, 245, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     color:#eceaea;
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtTPybFcs2hKk7joB_ScJfNp9d63eiUEUKis-VHDiP61Cy1aYJnSPdM1tK_Tlb514v8qA&usqp=CAU);
@@ -44,7 +46,12 @@
     flex-direction: column;
     font: 1em sans-serif;
     color: #f3e8e8;
-    background-color: #0f0c0c;
+    background-color: #25462b;
     font-weight: bold;
-   
+   border:#070707 1px solid;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
