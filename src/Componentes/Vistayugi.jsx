@@ -47,7 +47,7 @@ const Vistayugi = () => {
                                 precio3={el.card_prices[0].tcgplayer_price} 
                             />
                             <Link to={`/detalle/${el.id}`}  >
-                                <button>Detalle</button>
+                                <button className='boton'>Detalle</button>
                             </Link>
                         </div>
                     )))

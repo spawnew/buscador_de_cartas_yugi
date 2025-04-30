@@ -55,3 +55,22 @@
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+.boton{
+    
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0c0c;
+    color: #f3e8e8;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 10px;
+}
+.boton:hover {
+    background-color: #077e43;
+    color: #0f0c0c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

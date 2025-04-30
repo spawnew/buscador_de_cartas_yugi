@@ -1,0 +1,45 @@
+.detalleCarta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+  
+}
+.detalleCarta1{
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    background-color: #fa0b0b;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border-color: blue;
+    border: 1px solid #0a48f3;
+    padding: 1rem;
+    text-align: center;
+    width: 80vw;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtTPybFcs2hKk7joB_ScJfNp9d63eiUEUKis-VHDiP61Cy1aYJnSPdM1tK_Tlb514v8qA&usqp=CAU);
+      
+        background-position: center;
+      
+    }
+  
+
+.detalleCarta1 img{
+    max-width: 100%;
+    border-radius: 4px;
+    width: 20vw;
+    height: 40vh;
+}
+.detalleCarta1 h2{
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #f7f1f1;
+}
+.detalleCarta1 p{
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    color: #f0e9e9;
+}
