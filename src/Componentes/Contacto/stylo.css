@@ -1,14 +1,77 @@
-.contacto{
+.contacto {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 97%;
     font-size: large;
     font-weight: bold;
-    color: #eceaea;
-    
-    }
+    color: #fff;
+    padding: 2rem;
+    background-color: #121212;
+}
+
+.contacto h2 {
+    margin-bottom: 1rem;
+    color: #ff5757;
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e1e1e;
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(255, 87, 87, 0.4);
+    padding: 2rem;
+    width: 80%;
+    max-width: 500px;
+    transition: all 0.3s ease;
+}
+
+.contacto form input,
+.contacto form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border-radius: 6px;
+    border: 1px solid #ff5757;
+    font-size: 1rem;
+    background-color: #2b2b2b;
+    color: #fff;
+    transition: border 0.3s;
+}
+
+.contacto form input:focus,
+.contacto form textarea:focus {
+    outline: none;
+    border: 1px solid #ffaaaa;
+    background-color: #333;
+}
+
+.contacto form textarea {
+    resize: none;
+    min-height: 100px;
+}
+
+.contacto form input[type="submit"] {
+    background-color: #ff5757;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contacto form input[type="submit"]:hover {
+    background-color: #e04343;
+}
+
+.contacto p {
+    color: #ffaaaa;
+    font-size: 0.9rem;
+    margin: 0.25rem 0;
+}
 
 
 .lista{
@@ -18,7 +81,7 @@
     align-items: center;
     justify-content: center;
     width: 80vw;
-    height: 50vh;
+    height: 10vh;
     background-color: #0f0c0c;
     color: #f3e8e8;
     border-radius: 12px;
