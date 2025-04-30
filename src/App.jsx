@@ -1,14 +1,27 @@
 import Navbar from './Componentes/Navbar/Navbar'
 import './App.css'
 import Vistayugi from './Componentes/Vistayugi'
+import { BrowserRouter, Routes, Route } from 'react-router'
+import Contacto from './Componentes/Contacto'
+import Detalle from './Componentes/Detalle'
 function App() {
   
 
   return (
-    <>
-     <Navbar/>
-      <Vistayugi/>
-    </>
+    <BrowserRouter>
+      <Navbar />
+     
+      <Routes>
+        <Route path='/' element={<Vistayugi />} />
+        <Route path='/contacto' element={<Contacto />} />
+        <Route path='/detalle/:id' element={<Detalle/>} />
+        
+    </Routes>
+     
+      
+    
+    </BrowserRouter>
+    
   )
 }
 

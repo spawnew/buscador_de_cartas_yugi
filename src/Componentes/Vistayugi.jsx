@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import { helpHttp } from '../../helpers/helpHttp'
 import FormYugi from './FormYugi/FormYugi'
 import Yugi from './Yugi'
+import { Link } from 'react-router'
 const Vistayugi = () => {
     const [dato, setDato] = useState({ carta: null })
     const [yugi1, setyugi] = useState([])
@@ -45,7 +46,9 @@ const Vistayugi = () => {
                                 precio2={el.card_prices[0].ebay_price}    
                                 precio3={el.card_prices[0].tcgplayer_price} 
                             />
-
+                            <Link to={`/detalle/${el.id}`}  >
+                                <button>Detalle</button>
+                            </Link>
                         </div>
                     )))
                     : (yugi1.filter((el) => el.name === dato.carta).map((el) => (
