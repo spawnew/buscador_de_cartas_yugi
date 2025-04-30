@@ -10,9 +10,13 @@ const Navbar = () => {
       <div className='botones'>
       <Link to= "/contacto">
         <button className='boton'><p>Contacto</p></button>
-      </Link>
-      
+        </Link>
+        <Link to="/">
+          <button className='boton'><p>Home</p></button>
+        </Link>
+        <Link to="/nosotros">
         <button className='boton'><p>Sobre nosotros</p></button>
+      </Link>
       </div>
       </div>
    

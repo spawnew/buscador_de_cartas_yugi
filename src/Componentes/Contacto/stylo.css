@@ -91,11 +91,25 @@
     font-size: 1.5em;
     font-weight: bold;
 }
-.lista li img{
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
+.listafoto{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+}
+.listafoto img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    border: 2px solid #fff;
+    
+}
 
+.listafoto p {
+    font-size: 1rem;
+    margin: 0;
+    color: #f1f1f1;
+    font-weight: 500;
 }

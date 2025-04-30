@@ -38,7 +38,7 @@ const Vistayugi = () => {
             <FormYugi obtener={obtener} />
             <div className="contenedor-cartas">
                 {(dato.carta === null) ?
-                    (yugi1.slice(1, 10).map((el) => (
+                    (yugi1.slice(0, 9).map((el) => (
                         <div className='carta' key={el.id}>
                             <Yugi nombre={el.name}
                                 img={el.card_images[0].image_url}
@@ -56,6 +56,9 @@ const Vistayugi = () => {
                             <Yugi nombre={el.name}
                                 img={el.card_images[0].image_url}
                                 precio={el.card_prices[0].coolstuffinc_price} />
+                            <Link to={`/detalle/${el.id}`}  >
+                                <button className='boton'>Detalle</button>
+                            </Link>
 
                         </div>
                     )))}
