@@ -8,7 +8,7 @@ const Navbar = () => {
     <div className=" flex flex-col items-center justify-center ">
      
       
-      <div className=' flex-row grid grid-cols-10 border-amber-300 border-3  p-1 bg-gradient-to-r from-black via-amber-300 to-black w-full'>
+      <div className=' flex-row grid grid-cols-10 border-amber-300 border-2  p-1 bg-gradient-to-r from-black via-amber-300 to-black w-full'>
         <div className='col-span-1'>
           <Link to="/">
             <button className='border-2 m-2  cursor-pointer border-amber-300 p-1 rounded-xl hover:text-black hover:border-black  hover:bg-amber-300 '><p>Home</p></button>
