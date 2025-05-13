@@ -3,7 +3,7 @@ import { useParams } from 'react-router'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { helpHttp } from '../../assets/helpers/helpHttp'
-import "./stylo.css"
+
 const Detalle = () => {
 
     const { id } = useParams()
@@ -32,15 +32,17 @@ const Detalle = () => {
     }, [id])
 
     return (
-        <div className='detalleCarta'>
+        <div className='flex flex-col justify-center items-center
+         border-2 border-amber-400 bg-black p-2'>
 
             <h2>Detalles de la carta</h2>
             {yugi1.map((el) => (
                 <div key={el.id}>
-                    <div className='detalleCarta1'>
+                    <div className='flex flex-col p-3 m-2 justify-center items-center
+                     border-2 border-amber-400 bg-black '>
                         <h2>{el.name}</h2>
 
-                        <img src={el.card_images[0].image_url} alt="" />
+                        <img className='w-50 rounded-xl m-4  border-amber-50 border-1' src={el.card_images[0].image_url} alt="" />
 
                         <p>{el.desc}</p>
 

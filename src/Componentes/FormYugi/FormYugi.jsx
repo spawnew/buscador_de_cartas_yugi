@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import "./stylo.css"
+
 const FormYugi = ({ obtener }) => {
 
     const [form, setForm] = useState({ carta:"" })
@@ -17,21 +17,21 @@ const FormYugi = ({ obtener }) => {
         setForm({ carta: ""})
     }
     return (
-        <div className='formulario'>
-            <h2>Buscar carta</h2>
+        <div className='flex flex-col m-2 justify-center items-center border-2 border-amber-400 bg-black p-2'>
+            <h2 className='text-amber-100 text-shadow-black font-bold'>Buscador de cartas</h2>
 
 
 
 
+            <p className='text-amber-100 text-shadow-black font-bold '>Ingrese el nombre de la carta</p>
 
-
-            <form onSubmit={handleSubmit}>
-                <input type="text" onChange={handleChange} name="carta" value={form.carta} placeholder='ingrese la carta'>
+            <form className='border-2 border-amber-300 rounded-sm  ' onSubmit={handleSubmit}>
+                <input className='p-1 ' type="text" onChange={handleChange} name="carta" value={form.carta} placeholder='ingrese la carta'>
                 </input>
 
                
 
-                <input type="submit" ></input>
+                <input className='bg-amber-300 p-1 ml-3 border-amber-600 hover:bg-amber-600  ' type="submit" ></input>
 
             </form>
 
