@@ -25,7 +25,7 @@ const FormYugi = ({ obtener }) => {
 
             <p className='text-amber-100 text-shadow-black font-bold '>Ingrese el nombre de la carta</p>
 
-            <form className='border-2 border-amber-300 rounded-sm  ' onSubmit={handleSubmit}>
+            <form className='border-2 border-amber-300   ' onSubmit={handleSubmit}>
                 <input className='p-1 ' type="text" onChange={handleChange} name="carta" value={form.carta} placeholder='ingrese la carta'>
                 </input>
 
