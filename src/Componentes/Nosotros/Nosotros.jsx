@@ -28,7 +28,7 @@ const Nosotros = () => {
         <li>
           <Redes
             nombre="Facebook"
-            link="https://www.facebook.com/imperio.yugioh"
+            link="https://www.facebook.com/matyuyugioh.yugioh/"
             imagen={facebookImg}
           />
         </li>
