@@ -12,6 +12,7 @@ const Vistayugi = () => {
 
 
     const obtener = (dato) => {
+       console.log(dato)
         setDato(dato)
     }
     useEffect(() => {

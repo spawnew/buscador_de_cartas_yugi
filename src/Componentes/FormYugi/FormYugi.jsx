@@ -11,11 +11,20 @@ const FormYugi = ({ obtener }) => {
             [e.target.name]: e.target.value
         })
     }
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        console.log(form)
-        obtener(form)
-        setForm({ carta: ""})
+
+        const handleSubmit = (e) => {
+            e.preventDefault();
+          
+            
+            const capitalizada = form.carta
+              .trim()
+              .split(" ")
+              .map(palabra => palabra.charAt(0).toUpperCase() + palabra.slice(1).toLowerCase())
+              .join(" ");
+          
+            obtener({ carta: capitalizada });
+          
+            setForm({ carta: "" });
     }
     return (
         <div className='flex flex-col m-2 justify-center items-center border-2 border-amber-400 bg-black p-2'>
