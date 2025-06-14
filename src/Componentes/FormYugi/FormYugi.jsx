@@ -14,6 +14,10 @@ const FormYugi = ({ obtener }) => {
 
         const handleSubmit = (e) => {
             e.preventDefault();
+            if (form.carta.trim() === "") {
+                alert("Por favor, ingrese el nombre de la carta.");
+                return;
+            }
           
             
             const capitalizada = form.carta

@@ -12,7 +12,8 @@ const Vistayugi = () => {
 
 
     const obtener = (dato) => {
-       console.log(dato)
+        console.log(dato)
+     
         setDato(dato)
     }
     useEffect(() => {
@@ -40,7 +41,7 @@ const Vistayugi = () => {
             <FormYugi obtener={obtener} />
             <div className="flex flex-row flex-wrap justify-center items-center border-2 border-amber-400 bg-black p-2 ">
                 {(dato.carta === null) ?
-                    (yugi1.slice(0, 40).map((el) => (
+                    (yugi1.slice(0, 60).map((el) => (
                         <div className='flex flex-col items-center p-2 'key={el.id}>
                             <Yugi nombre={el.name}
                                 img={el.card_images[0].image_url}
@@ -53,7 +54,7 @@ const Vistayugi = () => {
                             </Link>
                         </div>
                     )))
-                    : (yugi1.filter((el) => el.name === dato.carta).map((el) => (
+                    : (yugi1.filter((el) => el.name === dato.carta  || el.archetype==dato.carta).map((el) => (
                         <div  key={el.id}>
                             <Yugi nombre={el.name}
                                 img={el.card_images[0].image_url}
