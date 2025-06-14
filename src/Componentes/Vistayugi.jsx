@@ -54,7 +54,7 @@ const Vistayugi = () => {
                             </Link>
                         </div>
                     )))
-                    : (yugi1.filter((el) => el.name === dato.carta  || el.archetype==dato.carta).map((el) => (
+                    : (yugi1.filter((el) => el.name === dato.carta  || el.archetype==dato.carta || el.race==dato.carta).map((el) => (
                         <div  key={el.id}>
                             <Yugi nombre={el.name}
                                 img={el.card_images[0].image_url}
