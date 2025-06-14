@@ -102,39 +102,37 @@ const Contacto = () => {
                 ></textarea>
                 {errors.comments && <p>{errors.comments}</p>}
 
-                <input type="submit" value="Enviar" />
+                <input className=' border-amber-300 border-2 p-1 bg-gradient-to-r from-black via-amber-300 to-black w-full'  type="submit" value="Enviar" />
             </form>
 
             {response && <p>Los datos han sido enviados.</p>}
             <div>
 
            
-            <ul className='lista'>
-                <li>
-                    <Redes
-                        nombre="Facebook"
-                        link="https://www.facebook.com/imperio.yugioh"
-                            imagen={facebookImg}
-                     />
-                </li>
-                <li>
-                    <Redes
-                        nombre="YouTobe"
-                        link="https://www.youtube.com/@imperio_yugioh"
-                            imagen={youtubeImg}
-                     />
-                </li>
-                <li>
-                    <Redes
-                        nombre="Instagram"
-                        link="https://www.instagram.com/imperio_yugioh/"
-                            imagen={instagramImg}
-                     />
-                </li>
-           
-            
-            
-                </ul>
+            <ul className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-6">
+        <li>
+          <Redes
+            nombre="Facebook"
+            link="https://www.facebook.com/imperio.yugioh"
+            imagen={facebookImg}
+          />
+        </li>
+        <li>
+          <Redes
+            nombre="YouTube"
+            link="https://www.youtube.com/@imperio_yugioh"
+            imagen={youtubeImg}
+          />
+        </li>
+        <li>
+          <Redes
+            nombre="Instagram"
+            link="https://www.instagram.com/imperio_yugioh/"
+            imagen={instagramImg}
+          />
+        </li>
+      </ul>
+    
             </div>
         </div>
     );

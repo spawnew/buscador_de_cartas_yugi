@@ -1,10 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
-
+import './stylo.css'
 const FormYugi = ({ obtener }) => {
 
     const [form, setForm] = useState({ carta:"" })
     const handleChange = (e) => {
+        
         setForm({
             ...form,
             [e.target.name]: e.target.value
@@ -26,7 +27,7 @@ const FormYugi = ({ obtener }) => {
             <p className='text-amber-100 text-shadow-black font-bold '>Ingrese el nombre de la carta</p>
 
             <form className='border-2 border-amber-300   ' onSubmit={handleSubmit}>
-                <input className='p-1 ' type="text" onChange={handleChange} name="carta" value={form.carta} placeholder='ingrese la carta'>
+                <input className='input '  type="text" onChange={handleChange} name="carta" value={form.carta} placeholder='ingrese la carta'>
                 </input>
 
                
