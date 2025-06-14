@@ -58,7 +58,9 @@ const Vistayugi = () => {
                         <div  key={el.id}>
                             <Yugi nombre={el.name}
                                 img={el.card_images[0].image_url}
-                                precio={el.card_prices[0].coolstuffinc_price} />
+                                precio={el.card_prices[0].coolstuffinc_price} 
+                              precio2={el.card_prices[0].ebay_price}
+                              precio3={el.card_prices[0].tcgplayer_price}/>
                             <Link to={`/detalle/${el.id}`}  >
                                 <button className='border-2 m-3 border-amber-300 p-2 rounded-xl hover:border-amber-600 '>Detalle</button>
                             </Link>
