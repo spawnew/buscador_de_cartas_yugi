@@ -20,7 +20,7 @@ const Nosotros = () => {
         <img
           className="border-4 border-amber-300 rounded-xl shadow-lg w-full max-w-md"
           src="https://www.hobbycorneregypt.com/cdn/shop/collections/yu-gi-oh-648878.jpg?v=1734332899"
-          alt="Cartas Yu-Gi-Oh!"
+          alt="Cartas Yu-Gi-Oh!"loading="lazy"
         />
       </a>
 

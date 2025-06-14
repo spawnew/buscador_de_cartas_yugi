@@ -42,7 +42,7 @@ const Detalle = () => {
                      border-2 border-amber-400 bg-black '>
                         <h2>{el.name}</h2>
 
-                        <img className='w-50 rounded-xl m-4  border-amber-50 border-1' src={el.card_images[0].image_url} alt="" />
+                        <img className='w-50 rounded-xl m-4  border-amber-50 border-1'loading="lazy" src={el.card_images[0].image_url} alt="" />
 
                         <p>{el.desc}</p>
 
