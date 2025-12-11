@@ -38,7 +38,7 @@ const Detalle = () => {
             <h2>Detalles de la carta</h2>
             {yugi1.map((el) => (
                 <div key={el.id}>
-                    <div className='flex flex-row p-3 m-2 justify-center items-center
+                    <div className='flex flex-col md:flex-row p-3 m-2 justify-center items-center
                      bg-black '>
                        <div className='flex flex-col justify-center'>
                         <h2>{el.name}</h2>
@@ -47,7 +47,7 @@ const Detalle = () => {
                             
                         {el.card_sets?.map((set) => (
   <div key={set.set_code} className="flex flex-col pr-0.5">
-    <div className='flex flex-row '>
+    <div className='flex flex-col md:flex-row '>
     <p className='mr-3'>{set.set_name}</p>
                                     <p className='mr-3'>{set.set_rarity}</p>
                                     <p className='mr-3'> {set.set_price > 0?set.set_price:<p>no hay precio</p> }</p>  
