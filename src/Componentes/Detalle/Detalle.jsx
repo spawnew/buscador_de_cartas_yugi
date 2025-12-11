@@ -33,13 +33,13 @@ const Detalle = () => {
 
     return (
         <div className='flex flex-col justify-center items-center
-         border-2 border-amber-400 bg-black p-2'>
+          border-amber-400 bg-black p-2'>
 
             <h2>Detalles de la carta</h2>
             {yugi1.map((el) => (
                 <div key={el.id}>
                     <div className='flex flex-row p-3 m-2 justify-center items-center
-                     border-2 border-amber-400 bg-black '>
+                     bg-black '>
                        <div className='flex flex-col justify-center'>
                         <h2>{el.name}</h2>
                      

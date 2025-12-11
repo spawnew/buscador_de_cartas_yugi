@@ -39,7 +39,7 @@ const Vistayugi = () => {
     return (
         <div>
             <FormYugi obtener={obtener} />
-            <div className="flex flex-row flex-wrap justify-center items-center border-2 border-amber-400 bg-black p-2 ">
+            <div className="flex flex-row flex-wrap justify-center items-center  border-amber-400 bg-gradient-to-r from-black via-amber-800 to-black p-2 ">
                 {(dato.carta === null) ?
                     (yugi1.slice(0, 40).map((el) => (
                         <div className='flex flex-col items-center p-2 'key={el.id}>
@@ -50,7 +50,7 @@ const Vistayugi = () => {
                                 precio3={el.card_prices[0].tcgplayer_price}
                             />
                             <Link to={`/detalle/${el.id}`}  >
-                                <button className='border-2 m-3 cursor-pointer border-amber-300 p-2 rounded-xl hover:text-black hover:border-black  hover:bg-amber-300 '>Detalle</button>
+                                <button className='border-1 m-3 cursor-pointer border-amber-300 p-2 rounded-xl hover:text-black hover:border-black  hover:bg-amber-300 '>Detalle</button>
                             </Link>
                         </div>
                     )))

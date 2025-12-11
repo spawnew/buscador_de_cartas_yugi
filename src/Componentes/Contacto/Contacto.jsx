@@ -102,7 +102,7 @@ const Contacto = () => {
                 ></textarea>
                 {errors.comments && <p>{errors.comments}</p>}
 
-                <input className=' border-amber-300 border-2 p-1 bg-gradient-to-r from-black via-amber-300 to-black w-full'  type="submit" value="Enviar" />
+                <input className=' border-amber-900 border-1 p-1 bg-gradient-to-r from-black via-amber-800 to-black w-full'  type="submit" value="Enviar" />
             </form>
 
             {response && <p>Los datos han sido enviados.</p>}

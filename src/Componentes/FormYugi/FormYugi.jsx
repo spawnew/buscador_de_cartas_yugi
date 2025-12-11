@@ -31,7 +31,7 @@ const FormYugi = ({ obtener }) => {
             setForm({ carta: "" });
     }
     return (
-        <div className='flex flex-col m-2 justify-center items-center border-2 border-amber-400 bg-black p-2'>
+        <div className='flex flex-col m-2 justify-center items-center bg-black p-2'>
             <h2 className='text-amber-100 text-shadow-black font-bold'>Buscador de cartas</h2>
 
 
@@ -39,7 +39,7 @@ const FormYugi = ({ obtener }) => {
 
             <p className='text-amber-100 text-shadow-black font-bold '>Ingrese el nombre de la carta</p>
 
-            <form className='border-2 border-amber-300   ' onSubmit={handleSubmit}>
+            <form className='border-1 border-amber-300   ' onSubmit={handleSubmit}>
                 <input className='input '  type="text" onChange={handleChange} name="carta" value={form.carta} placeholder='ingrese la carta'>
                 </input>
 
