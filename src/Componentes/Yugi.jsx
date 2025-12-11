@@ -5,7 +5,7 @@ const Yugi = ({ nombre, img ,precio,precio2,precio3}) => {
 
         <div className=' 
          justify-center flex flex-col items-center p-1'><h2 className='text-amber-600 font-bold'>{nombre}</h2>
-            <img className='w-30 border-2 m-1 ' src={img} alt={nombre}loading="lazy" />
+            <img className='w-30 border-1 border-black m-1 ' src={img} alt={nombre}loading="lazy" />
             <div className='flex text-amber-100 flex-col justify-center items-center'>
                 {(precio <= 0) ? <p>Sin precio</p> : <p>Precio Colstufing: {precio}</p>}
                 {(precio2 <= 0) ? <p>Sin precio</p> : <p>Precio Ebay: {precio2}</p>}
