@@ -41,7 +41,7 @@ const Vistayugi = () => {
             <FormYugi obtener={obtener} />
             <div className="flex flex-row flex-wrap justify-center items-center  border-amber-400 bg-gradient-to-r from-black via-amber-800 to-black p-2 ">
                 {(dato.carta === null) ?
-                    (yugi1.slice(0, 40).map((el) => (
+                    (yugi1.slice(0, 20).map((el) => (
                         <div className='flex flex-col items-center p-2 'key={el.id}>
                             <Yugi nombre={el.name}
                                 img={el.card_images[0].image_url}
