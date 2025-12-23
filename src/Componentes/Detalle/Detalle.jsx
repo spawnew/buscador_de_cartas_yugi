@@ -3,9 +3,10 @@ import { useParams } from 'react-router'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { helpHttp } from '../../assets/helpers/helpHttp'
-
+import { useContext } from 'react'
+import { TemaContext } from '../../Context/TemaContext'
 const Detalle = () => {
-
+const {  añadir } = useContext(TemaContext)
     const { id } = useParams()
 
     const [yugi1, setyugi] = useState([])
@@ -51,9 +52,20 @@ const Detalle = () => {
                         <p>Nivel: {el.level}</p>
                             </div>
                         <img className='w-50 rounded-xl m-4  border-amber-50 border-1'loading="lazy" src={el.card_images[0].image_url} alt="" />
-
-                      
-
+           <button
+        onClick={() => {
+          const carta = {
+            nombre: el.name,
+            img: el.card_images[0].image_url,
+            type: el.type,
+            
+          }
+           añadir(carta)
+        }}
+        className="mt-2 bg-amber-900 text-amber-100 font-bold px-4 rounded text-md  hover:bg-amber-600 leading-none p-2"
+      >
+        Añadir favoritos
+      </button>
                     </div>
                 </div>
             ))}

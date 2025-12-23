@@ -5,17 +5,38 @@ import { helpHttp } from '../assets/helpers/helpHttp'
 import FormYugi from './FormYugi/FormYugi'
 import Yugi from './Yugi'
 import { Link } from 'react-router'
-
+import { useContext } from 'react'
+import { TemaContext } from '../Context/TemaContext'
 const Vistayugi = () => {
     const [dato, setDato] = useState({ carta: null })
     const [yugi1, setyugi] = useState([])
      const [load, setLoad] = useState(false)
 
-
+const {  añadir } = useContext(TemaContext)
     const obtener = (dato) => {
         console.log(dato)
      
         setDato(dato)
+    }
+
+    const cambiarPagina = () => { 
+        if (pagAct < 0) return;
+        
+       
+
+        setPaga(pag);
+        setPag(pag+15)
+    }
+    const cambiarPagina2 = () => { 
+        if (pag === 15) {
+            setPag(0);
+           return 
+        }
+        
+       setPaga(pag);
+ setPag(pag-15)
+        
+       
     }
     useEffect(() => {
         console.log(dato)
@@ -36,7 +57,8 @@ const Vistayugi = () => {
         fetchData()
 
     }, [dato])
-
+    const [pag, setPag] = useState(15);
+    const [pagAct,setPaga]= useState (0);
     return (
         <div >
             <FormYugi obtener={obtener} />
@@ -46,53 +68,69 @@ const Vistayugi = () => {
   {!load && <p className="text-amber-100">Cargando...</p>}
 
   {load && dato.carta === null &&
-    yugi1.slice(0, 15).map(el => (
+    yugi1.slice(pagAct, pag).map(el => (
       <div className="flex flex-col items-center p-2" key={el.id}>
         <Yugi
           nombre={el.name}
           img={el.card_images[0].image_url}
           precio={el.card_prices[0].coolstuffinc_price}
           precio2={el.card_prices[0].ebay_price}
-          precio3={el.card_prices[0].tcgplayer_price}
+                precio3={el.card_prices[0].tcgplayer_price}
+                añadir={añadir}
+                type={el.type}
         />
         <Link to={`/detalle/${el.id}`}>
           <button className="m-3 p-2 rounded-xl bg-black
                              border border-amber-900 hover:bg-amber-800">
             Detalle
           </button>
-        </Link>
+            </Link>
+            
+        
       </div>
     ))
   }
 
   {load && dato.carta !== null &&
-    yugi1
-      .filter(el =>
-        el.name === dato.carta ||
-        el.archetype === dato.carta ||
-          el.race === dato.carta||
-          el.type === dato.type
-      )
-      .map(el => (
-        <div className="flex flex-col items-center p-2" key={el.id}>
-          <Yugi
-            nombre={el.name}
-            img={el.card_images[0].image_url}
-            precio={el.card_prices[0].coolstuffinc_price}
-            precio2={el.card_prices[0].ebay_price}
-            precio3={el.card_prices[0].tcgplayer_price}
-          />
-          <Link to={`/detalle/${el.id}`}>
-            <button className="m-3 p-2 rounded-xl border border-amber-300
-                               hover:border-amber-600">
-              Detalle
-            </button>
-          </Link>
-        </div>
-      ))
-  }
+  yugi1
+    .filter(el =>
+      el.name === dato.carta ||
+      el.archetype === dato.carta ||
+        el.race === dato.carta||
+        el.type === dato.type
+    )
+    .map(el => (
+      <div className="flex flex-col items-center p-2" key={el.id}>
+            <Yugi
+                id={el.id}
+          nombre={el.name}
+          img={el.card_images[0].image_url}
+          precio={el.card_prices[0].coolstuffinc_price}
+          precio2={el.card_prices[0].ebay_price}
+                precio3={el.card_prices[0].tcgplayer_price}
+                type={el.type}
+          añadir={añadir}     
+        />
+        <Link to={`/detalle/${el.id}`}>
+          <button className="m-3 p-2 rounded-xl border border-amber-300
+                             hover:border-amber-600">
+            Detalle
+          </button>
+        </Link>
+      </div>
+    ))
+}
 
 </div>
+            <div className='flex flex-row justify-center'>
+                <button onClick={() => cambiarPagina2()}  className="m-3 p-2 rounded-xl bg-black" >
+                  Anterior
+                </button>
+                <p>{pag}</p>
+                <button onClick={() =>cambiarPagina()}  className="m-3 p-2 rounded-xl bg-black" >
+                  Siguiente
+                </button>
+            </div>
 
         </div>
     )

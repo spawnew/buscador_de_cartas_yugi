@@ -6,6 +6,7 @@ import Contacto from './Componentes/Contacto/Contacto'
 import Detalle from './Componentes/Detalle/Detalle'
 import Nosotros from './Componentes/Nosotros/Nosotros'
 import { ThemeProvider } from './Context/TemaContext';
+import Deck from './Componentes/Fav/Deck';
 import AOS from "aos";
 import { useEffect } from 'react';
 import 'aos/dist/aos.css';
@@ -30,6 +31,7 @@ function App() {
 
         <Routes>
           <Route path='/' element={<Vistayugi />} />
+          <Route path='/deck' element={<Deck />} />
           <Route path='/contacto' element={<Contacto />} />
 
           <Route path='/detalle/:id' element={<Detalle />} />
