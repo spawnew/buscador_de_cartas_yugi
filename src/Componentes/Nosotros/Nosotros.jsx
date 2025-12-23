@@ -6,10 +6,10 @@ import instagramImg from '../../assets/instagram.jpeg';
 
 const Nosotros = () => {
   return (
-<div  className="flex flex-col  md:pb-20 w-screen h-screen flex-wrap justify-center items-center  border-amber-400 bg-gradient-to-r from-amber-950 via-black to-amber-950 p-2 ">
-      <p data-aos="fade-down" className=" text-xs md:text-lg text-center">Es un buscador de cartas de la tienda Imperio YUGIOH.</p>
-      <p data-aos="fade-down" className=" text-xs md:text-lg text-center">Para ver las nuestras en stock.</p>
-      <p data-aos="fade-down" className=" text-xs md:text-lg text-center">Si quieres ver las cartas que tenemos en stock, puedes visitar nuestro drive.</p>
+<div  className="flex flex-col  md:pb-20 md:w-screen md:h-screen flex-wrap justify-center items-center  border-amber-400 bg-gradient-to-r from-amber-950 via-black to-amber-950 p-2 ">
+      <p data-aos="fade-down" className=" flex-wraptext-xs md:text-lg text-center">Es un buscador de cartas de la tienda Imperio YUGIOH.</p>
+      <p data-aos="fade-down" className=" flex-wrap text-xs md:text-lg text-center">Para ver las nuestras en stock.</p>
+      <p data-aos="fade-down" className="flex-wrap  text-xs md:text-lg text-center">Si quieres ver las cartas que tenemos en stock, puedes visitar nuestro drive.</p>
 
       <a
         href="https://drive.google.com/drive/u/0/folders/1QMC-FI6N5I1CN17iMVa5HbBq0O3QAyX4?fbclid=IwY2xjawJs_YtleHRuA2FlbQIxMAABHqldnBrR20KKUwc9sPmciqWPF4u5UVoSTpkSW6P5KkynggQc6q7tfODRnoUc_aem_LyUpIaHql32uX8-onSb7Og"
