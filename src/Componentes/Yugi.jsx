@@ -6,7 +6,7 @@ const Yugi = ({ nombre, img ,precio,precio2,precio3}) => {
     
     return (
 
-          <div className=" border-amber-600 border-2 w-fit h-fit sm:flex-col transition-transform duration-300 hover:scale-105 hover:opacity-80 cursor-pointer hover:bg-amber-950 hover:border-black hover:border-2 flex flex-col items-center  m-2 p-4 bg-black rounded-lg shadow-lg">
+          <div  data-aos="fade-up" className="  border-amber-600 border-2 w-fit h-fit sm:flex-col transition-transform duration-300 hover:scale-105 hover:opacity-80 cursor-pointer hover:bg-amber-950 hover:border-black hover:border-2 flex flex-col items-center  m-2 p-4 bg-black rounded-lg shadow-lg">
            
              
             <h2 className='text-amber-200 font-bold'>{nombre}</h2>

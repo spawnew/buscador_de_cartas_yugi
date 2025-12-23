@@ -54,9 +54,11 @@ const Contacto = () => {
     } = useForm(initialForm, validationsForm);
 
     return (
-        <div className='contacto'>
+        <div   className="min-h-screen flex flex-col items-center
+                bg-gradient-to-r from-amber-950 via-black to-amber-950 p-4">
+
             <h2>Formulario de Contacto</h2>
-            <form onSubmit={handleSubmit}>
+            <form data-aos="fade-down" className='formu' onSubmit={handleSubmit}>
                 <input
                     type="text"
                     name="name"
@@ -106,7 +108,9 @@ const Contacto = () => {
             </form>
 
             {response && <p>Los datos han sido enviados.</p>}
-            <div>
+          
+            <div className='flex-col'>
+                
 
            
             <ul className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-6">
@@ -133,7 +137,7 @@ const Contacto = () => {
         </li>
       </ul>
     
-            </div>
+          </div>
         </div>
     );
 };

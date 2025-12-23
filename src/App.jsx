@@ -5,10 +5,21 @@ import { BrowserRouter, Routes, Route } from 'react-router'
 import Contacto from './Componentes/Contacto/Contacto'
 import Detalle from './Componentes/Detalle/Detalle'
 import Nosotros from './Componentes/Nosotros/Nosotros'
-
-
 import { ThemeProvider } from './Context/TemaContext';
+import AOS from "aos";
+import { useEffect } from 'react';
+import 'aos/dist/aos.css';
+
 function App() {
+  useEffect(() => {
+   
+
+    AOS.init({
+      duration:  1000,
+      once: true,
+    });
+  }, []);
+
 
 
   return (

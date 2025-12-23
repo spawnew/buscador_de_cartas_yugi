@@ -16,55 +16,55 @@
     color: #f5f117;
 }
 
-.contacto form {
+ .formu {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #1e1e1e;
+    background-color: #020101;
     color: #fff;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(255, 87, 87, 0.4);
+    box-shadow: 0 4px 12px rgba(228, 124, 5, 0.4);
     padding: 2rem;
     width: 80%;
     max-width: 500px;
     transition: all 0.3s ease;
 }
 
-.contacto form input,
-.contacto form textarea {
+ form input,
+ form textarea {
     width: 100%;
     padding: 0.75rem;
     margin: 0.5rem 0;
     border-radius: 6px;
-    
+    border-color: #eb830d;
     font-size: 1rem;
-    background-color: #2b2b2b;
+    background-color: #0e0806;
     color: #fff;
     transition: border 0.3s;
 }
 
-.contacto form input:focus,
-.contacto form textarea:focus {
+ form input:focus,
+ form textarea:focus {
     outline: none;
-    border: 1px solid #ffaaaa;
+    border: 1px solid #f17705;
     background-color: #333;
 }
 
-.contacto form textarea {
+ form textarea {
     resize: none;
     min-height: 100px;
 }
 
-.contacto form input[type="submit"] {
+ form input[type="submit"] {
     
-    color: #fff;
+    color: #f17c0e;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .contacto form input[type="submit"]:hover {
-    background-color: #f5f117;
+    background-color: #f58d17;
 }
 
 .contacto p {
