@@ -1,13 +1,13 @@
 import React from 'react';
 
-import "./stylo.css"
+
 
 const Redes = ({ nombre, link, imagen }) => {
     return (
-        <div className='listafoto'>
+        <div className='flex md:flex-col flex-row justify-center w-20 md:w-50   items-center md:m-4 hover:scale-105 transition-transform duration-300'>
                 <a href={link} >
-                <img src={imagen} alt={nombre} />
-                <p>{nombre}</p>
+                <img className='rounded-lg w-10 h-10' src={imagen} alt={nombre} />
+                <p className='text-amber-100 text-center'>{nombre}</p>
             </a>
         </div>
             

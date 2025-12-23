@@ -46,8 +46,8 @@ const Detalle = () => {
                             <p>Tipo: {el.race}  </p>
                         <p>Arquetipo: {el.archetype ? el.archetype : 'Sin arquetipo'}</p>
                         <p>Tipo: {el.type}</p>
-                        <p>Atk:{el.atk>0? el.atk:<p>Esta carta no tiene ataque</p>}</p>
-                         <p>Def:{el.def>0? el.def:<p>Esta carta no tiene defensa</p>}</p>
+                        <p>Atk:{el.atk >= 0? el.atk:<p>Esta carta no tiene ataque</p>}</p>
+                         <p>Def:{el.def >= 0? el.def:<p>Esta carta no tiene defensa</p>}</p>
                         <p>Nivel: {el.level}</p>
                             </div>
                         <img className='w-50 rounded-xl m-4  border-amber-50 border-1'loading="lazy" src={el.card_images[0].image_url} alt="" />
