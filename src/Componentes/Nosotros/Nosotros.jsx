@@ -18,7 +18,7 @@ const Nosotros = () => {
         className="hover:scale-105 transition-transform duration-300"
       >
         <img data-aos="fade-up"
-          className="border-4 m-10 border-amber-300 rounded-xl shadow-lg  w-50 h-50 md:w-full md:max-w-md"
+          className="border-4 m-10 border-amber-300 rounded-xl shadow-lg  w-40 h-40 md:w-full md:max-w-md"
           src="https://www.hobbycorneregypt.com/cdn/shop/collections/yu-gi-oh-648878.jpg?v=1734332899"
           alt="Cartas Yu-Gi-Oh!"loading="lazy"
         />
