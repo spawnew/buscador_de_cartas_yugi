@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="md:col-span-1 flex justify-center">
         <Link to="/">
           <button className=" m-2 cursor-pointer border-amber-800 p-2 rounded-xl hover:text-amber-100 hover:border-black hover:bg-amber-900">
-            <p>Home</p>
+            <p className="text-sm">Home</p>
           </button>
         </Link>
       </div>
@@ -25,14 +25,14 @@ const Navbar = () => {
       </div>
   
       <div className="md:col-span-6 flex flex-col justify-center items-center text-center">
-        <h1 className="text-amber-100 text-shadow-black font-bold text-xl md:text-3xl">Imperio YUGIOH</h1>
-        <h2 className="text-white text-base md:text-lg">Buscador de cartas</h2>
+        <h1 className="text-amber-100 text-shadow-black font-bold text-sm md:text-3xl">Imperio YUGIOH</h1>
+        <h2 className="text-white text-sm md:text-lg">Buscador de cartas</h2>
       </div>
   
       <div className="md:col-span-2 flex justify-center">
         <Link to="/nosotros">
                    <button className=" m-2 cursor-pointer border-amber-800 p-2 rounded-xl hover:text-amber-100 hover:border-black hover:bg-amber-900">
-            <p>Sobre Nosotros</p>
+            <p className="text-sm">Sobre Nosotros</p>
           </button>
         </Link>
       </div>
