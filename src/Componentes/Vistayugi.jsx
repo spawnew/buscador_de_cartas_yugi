@@ -9,6 +9,7 @@ import { Link } from 'react-router'
 const Vistayugi = () => {
     const [dato, setDato] = useState({ carta: null })
     const [yugi1, setyugi] = useState([])
+     const [load, setLoad] = useState(false)
 
 
     const obtener = (dato) => {
@@ -30,6 +31,7 @@ const Vistayugi = () => {
 
             console.log(resyugi.data)
             setyugi(resyugi.data)
+            setLoad(true);
         }
         fetchData()
 
@@ -38,36 +40,60 @@ const Vistayugi = () => {
     return (
         <div >
             <FormYugi obtener={obtener} />
-            <div className="flex flex-row flex-wrap justify-center items-center  border-amber-400 bg-gradient-to-r from-amber-950 via-black to-amber-950 p-2 ">
-                {(dato.carta === null) ?
-                    (yugi1.slice(0, 15).map((el) => (
-                        <div className='flex flex-col items-center p-2 'key={el.id}>
-                            <Yugi nombre={el.name}
-                                img={el.card_images[0].image_url}
-                                precio={el.card_prices[0].coolstuffinc_price}
-                                precio2={el.card_prices[0].ebay_price}
-                                precio3={el.card_prices[0].tcgplayer_price}
-                            />
-                            <Link to={`/detalle/${el.id}`}  >
-                                <button className='border-1 m-3 cursor-pointer w-55 from-amber-950 via-black to-amber-950 border-amber-900 p-2 rounded-xl hover:text-black hover:border-black bg-black hover:bg-amber-800 '>Detalle</button>
-                            </Link>
-                        </div>
-                    )))
-                    : (yugi1.filter((el) => el.name === dato.carta  || el.archetype==dato.carta || el.race==dato.carta).map((el) => (
-                        <div  key={el.id}>
-                            <Yugi nombre={el.name}
-                                img={el.card_images[0].image_url}
-                                precio={el.card_prices[0].coolstuffinc_price} 
-                              precio2={el.card_prices[0].ebay_price}
-                              precio3={el.card_prices[0].tcgplayer_price}/>
-                            <Link to={`/detalle/${el.id}`}  >
-                                <button className='border-1 m-3 border-amber-300 p-2 rounded-xl hover:border-amber-600  '>Detalle</button>
-                            </Link>
+           <div className="flex flex-row flex-wrap justify-center items-center
+                bg-gradient-to-r from-amber-950 via-black to-amber-950 p-2">
 
-                        </div>
-                    )))}
+  {!load && <p className="text-amber-100">Cargando...</p>}
 
-            </div>
+  {load && dato.carta === null &&
+    yugi1.slice(0, 15).map(el => (
+      <div className="flex flex-col items-center p-2" key={el.id}>
+        <Yugi
+          nombre={el.name}
+          img={el.card_images[0].image_url}
+          precio={el.card_prices[0].coolstuffinc_price}
+          precio2={el.card_prices[0].ebay_price}
+          precio3={el.card_prices[0].tcgplayer_price}
+        />
+        <Link to={`/detalle/${el.id}`}>
+          <button className="m-3 p-2 rounded-xl bg-black
+                             border border-amber-900 hover:bg-amber-800">
+            Detalle
+          </button>
+        </Link>
+      </div>
+    ))
+  }
+
+  {load && dato.carta !== null &&
+    yugi1
+      .filter(el =>
+        el.name === dato.carta ||
+        el.archetype === dato.carta ||
+          el.race === dato.carta||
+          el.type === dato.type
+      )
+      .map(el => (
+        <div className="flex flex-col items-center p-2" key={el.id}>
+          <Yugi
+            nombre={el.name}
+            img={el.card_images[0].image_url}
+            precio={el.card_prices[0].coolstuffinc_price}
+            precio2={el.card_prices[0].ebay_price}
+            precio3={el.card_prices[0].tcgplayer_price}
+          />
+          <Link to={`/detalle/${el.id}`}>
+            <button className="m-3 p-2 rounded-xl border border-amber-300
+                               hover:border-amber-600">
+              Detalle
+            </button>
+          </Link>
+        </div>
+      ))
+  }
+
+</div>
+
         </div>
     )
 }
