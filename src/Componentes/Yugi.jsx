@@ -1,11 +1,16 @@
 import React from 'react'
 
 const Yugi = ({ nombre, img ,precio,precio2,precio3}) => {
+    
+ 
+    
     return (
 
-        <div className=' 
-         justify-center flex flex-col items-center p-1'><h2 className='text-amber-600 font-bold'>{nombre}</h2>
-            <img className='w-30 border-1 border-black m-1 ' src={img} alt={nombre}loading="lazy" />
+          <div className=" border-amber-600 border-2 w-fit h-fit sm:flex-col transition-transform duration-300 hover:scale-105 hover:opacity-80 cursor-pointer hover:bg-amber-950 hover:border-black hover:border-2 flex flex-col items-center  m-2 p-4 bg-black rounded-lg shadow-lg">
+           
+             
+            <h2 className='text-amber-200 font-bold'>{nombre}</h2>
+            <img className='w-30 border-1 border-black m-1 ' src={img} alt={nombre} loading="lazy" />
             <div className='flex text-amber-100 flex-col justify-center items-center'>
                 {(precio <= 0) ? <p>Sin precio</p> : <p>Precio Colstufing: {precio}</p>}
                 {(precio2 <= 0) ? <p>Sin precio</p> : <p>Precio Ebay: {precio2}</p>}
