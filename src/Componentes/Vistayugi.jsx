@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import { helpHttp } from '../assets/helpers/helpHttp'
 import FormYugi from './FormYugi/FormYugi'
 import Yugi from './Yugi'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { TemaContext } from '../Context/TemaContext'
 const Vistayugi = () => {
@@ -29,11 +29,11 @@ const {  añadir } = useContext(TemaContext)
     }
     const cambiarPagina2 = () => { 
         if (pag === 15) {
-            setPag(0);
+          
            return 
         }
         
-       setPaga(pag);
+       setPaga(pag-30);
  setPag(pag-15)
         
        
@@ -58,12 +58,21 @@ const {  añadir } = useContext(TemaContext)
 
     }, [dato])
     const [pag, setPag] = useState(15);
-    const [pagAct,setPaga]= useState (0);
+    const [pagAct, setPaga] = useState(0);
+    useEffect(() => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}, [pagAct]);
+
     return (
         <div >
             <FormYugi obtener={obtener} />
            <div className="flex flex-row flex-wrap justify-center items-center
                 bg-gradient-to-r from-amber-950 via-black to-amber-950 p-2">
+ 
+ 
 
   {!load && <p className="text-amber-100">Cargando...</p>}
 
@@ -71,15 +80,16 @@ const {  añadir } = useContext(TemaContext)
     yugi1.slice(pagAct, pag).map(el => (
       <div className="flex flex-col items-center p-2" key={el.id}>
         <Yugi
-          nombre={el.name}
-          img={el.card_images[0].image_url}
-          precio={el.card_prices[0].coolstuffinc_price}
-          precio2={el.card_prices[0].ebay_price}
-                precio3={el.card_prices[0].tcgplayer_price}
-                añadir={añadir}
-                type={el.type}
-        />
-        <Link to={`/detalle/${el.id}`}>
+  id={el.id} 
+  nombre={el.name}
+  img={el.card_images[0].image_url}
+  precio={el.card_prices[0].coolstuffinc_price}
+  precio2={el.card_prices[0].ebay_price}
+  precio3={el.card_prices[0].tcgplayer_price}
+  añadir={añadir}
+  type={el.type}
+/>
+       <Link to={`/detalle/${el.id}`}>
           <button className="m-3 p-2 rounded-xl bg-black
                              border border-amber-900 hover:bg-amber-800">
             Detalle
@@ -122,11 +132,13 @@ const {  añadir } = useContext(TemaContext)
 }
 
 </div>
-            <div className='flex flex-row justify-center'>
+            <div className='flex flex-row items-center justify-center'>
+              
                 <button onClick={() => cambiarPagina2()}  className="m-3 p-2 rounded-xl bg-black" >
                   Anterior
-                </button>
-                <p>{pag}</p>
+                    </button>
+           
+                <p className='text-amber-100'>{pag}</p>
                 <button onClick={() =>cambiarPagina()}  className="m-3 p-2 rounded-xl bg-black" >
                   Siguiente
                 </button>

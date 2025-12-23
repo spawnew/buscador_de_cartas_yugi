@@ -1,7 +1,7 @@
 import Navbar from './Componentes/Navbar/Navbar'
 import './App.css'
 import Vistayugi from './Componentes/Vistayugi'
-import { BrowserRouter, Routes, Route } from 'react-router'
+import {  Routes, Route } from 'react-router-dom'
 import Contacto from './Componentes/Contacto/Contacto'
 import Detalle from './Componentes/Detalle/Detalle'
 import Nosotros from './Componentes/Nosotros/Nosotros'
@@ -24,7 +24,7 @@ function App() {
 
 
   return (
-    <BrowserRouter>
+    
 
       <ThemeProvider>
         <Navbar />
@@ -42,7 +42,7 @@ function App() {
 
       </ThemeProvider>
 
-    </BrowserRouter>
+  
 
   )
 }

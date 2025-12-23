@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Yugi = ({ nombre, img, precio, precio2, precio3, type, añadir,id }) => {
-    
+    console.log(id)
     const carta = { nombre, img, type,id }
 
     return (
@@ -19,7 +19,7 @@ const Yugi = ({ nombre, img, precio, precio2, precio3, type, añadir,id }) => {
                 className="mt-2 bg-amber-900 text-amber-100 font-bold px-4
                            rounded text-md  hover:bg-amber-600 leading-none p-2"
                 >
-                Añadir favoritos
+                Añadir al deck
               </button>
             </div>
             

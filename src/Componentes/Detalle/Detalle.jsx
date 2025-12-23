@@ -58,7 +58,7 @@ const {  añadir } = useContext(TemaContext)
             nombre: el.name,
             img: el.card_images[0].image_url,
             type: el.type,
-            
+            id: el.id
           }
            añadir(carta)
         }}
