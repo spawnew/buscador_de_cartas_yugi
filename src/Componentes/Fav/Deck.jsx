@@ -14,7 +14,7 @@ const Favorito = () => {
      <Link key={el.id} to={`/detalle/${el.id}`}>
          <div key={index} className="flex flex-col items-center p-2">
     
-    <img src={el.img} alt={el.nombre} className= "w-20 h-auto" />
+    <img src={el.img} alt={el.nombre} className= "w-20 h-20 md:h-auto" />
   </div>
         </Link>
 ))}
@@ -24,7 +24,7 @@ const Favorito = () => {
       <Link key={el.id} to={`/detalle/${el.id}`}>
   <div key={index} className="flex flex-col flex-wrap justify-around items-center p-2">
    
-    <img src={el.img} alt={el.nombre} className="w-20 h-auto" />
+     <img src={el.img} alt={el.nombre} className= "w-20 h-20 md:h-auto" />
   </div>
 </Link>
 ))}
@@ -34,7 +34,7 @@ const Favorito = () => {
      <Link key={el.id} to={`/detalle/${el.id}`}>
          <div key={index} className="flex flex-col items-center p-2">
 
-    <img src={el.img} alt={el.nombre} className= "w-20 h-auto" />
+      <img src={el.img} alt={el.nombre} className= "w-20 h-20 md:h-auto" />
   </div>
         </Link>
  
@@ -47,7 +47,7 @@ const Favorito = () => {
     <Link key={el.id} to={`/detalle/${el.id}`}>
          <div key={index} className="flex flex-col items-center p-2">
    
-    <img src={el.img} alt={el.nombre} className= "w-20 h-auto" />
+    <img src={el.img} alt={el.nombre} className= "w-20 h-20 md:h-auto" />
   </div>
         </Link>
  
