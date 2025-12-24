@@ -25,24 +25,28 @@ const Favorito = () => {
         </div> 
             <div className='flex flex-row flex-wrap bg-emerald-700'>
           {magia.map((el, index) => (
-      <Link key={el.id} to={`/detalle/${el.id}`}>
+      
   <div data-aos="fade-up" key={index} className="flex flex-col flex-wrap justify-around items-center p-2">
    
-                <img src={el.img} alt={el.nombre} className="w-20 h-20 md:h-auto" />
-                <button className='bg-red-800 rounded' onClick={() => borrar && borrarCarta(el.id)}>Borrar Deck</button>
+              <Link key={el.id} to={`/detalle/${el.id}`}>
+                  <img src={el.img} alt={el.nombre} className="w-20 h-20 md:h-auto" />
+                </Link>
+              <button className='bg-red-800 rounded' onClick={() => borrarCarta(el.id)}> <FiX /></button>
   </div>
-</Link>
+
 ))}
         </div> 
              <div className='flex flex-row  flex-wrap bg-purple-700'>
 {trampa.map((el, index) => (
-     <Link key={el.id} to={`/detalle/${el.id}`}>
+     
          <div data-aos="fade-up" key={index} className="flex flex-col items-center p-2">
 
-      <img src={el.img} alt={el.nombre} className="w-20 h-20 md:h-auto" />
-      <button className='bg-red-800 rounded' onClick={() => borrar && borrarCarta(el.id)}>Borrar Deck</button>
+       <Link key={el.id} to={`/detalle/${el.id}`}>
+                  <img src={el.img} alt={el.nombre} className="w-20 h-20 md:h-auto" />
+                </Link>
+     <button className='bg-red-800 rounded' onClick={() => borrarCarta(el.id)}> <FiX /></button>
   </div>
-        </Link>
+      
  
   
 ))}
@@ -50,14 +54,16 @@ const Favorito = () => {
         <div className='flex flex-row  flex-wrap
           bg-blue-900'>
           {extra.map((el, index) => (
-    <Link key={el.id} to={`/detalle/${el.id}`}>
+    
          <div data-aos="fade-up" key={index} className="flex flex-col items-center p-2">
    
-                <img src={el.img} alt={el.nombre} className="w-20 h-20 md:h-auto" />
+               <Link key={el.id} to={`/detalle/${el.id}`}>
+                  <img src={el.img} alt={el.nombre} className="w-20 h-20 md:h-auto" />
+                </Link>
                 
-              </div>
-              <button className='bg-red-800 rounded' onClick={() => borrar && borrarCarta(el.id)}>Borrar Deck</button>
-        </Link>
+             
+            <button className='bg-red-800 rounded' onClick={() => borrarCarta(el.id)}> <FiX /></button>
+        </div>
  
 ))}
         </div> 

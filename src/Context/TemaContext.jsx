@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { useEffect } from "react";
+import { toast } from "react-toastify";
 export const TemaContext = createContext(null);
 
 export const ThemeProvider = ({ children }) => {
@@ -40,42 +41,51 @@ useEffect(() => {
                 switch (carta.type) {
                     case "Effect Monster":
                         setMoster((prevMoster) => [...prevMoster, carta]);
+                        toast.success(`"${carta.nombre}" se agregó al deck 🎉`)
                         break;
                     case "Normal Monster":
                         setMoster((prevMoster) => [...prevMoster, carta]);
+                        toast.success(`"${carta.nombre}" se agregó al deck 🎉`)
                         break;
                     case "Flip Effect Monster":
                         setMoster((prevMoster) => [...prevMoster, carta]);
+                        toast.success(`"${carta.nombre}" se agregó al deck 🎉`)
                         break;
                     case "Spell Card":
                         setMagia((prevMagia) => [...prevMagia, carta]);
+                        toast.success(`"${carta.nombre}" se agregó al deck 🎉`)
                         break;
                     case "Trap Card":
                         setTrampa((prevTrampa) => [...prevTrampa, carta]);
+                        toast.success(`"${carta.nombre}" se agregó al deck 🎉`)
                         break;
                 }
             }
         }
             else {
-            alert("No puedes añadir más de 40 cartas a tu baraja");
+            toast.error("No puedes añadir más de 40 cartas a tu baraja");
         }
              if (extra.length <= 15) { 
         switch (carta.type) {
             case "XYZ Monster":
-                        setExtra((prevMoster) => [...prevMoster, carta]);
+                setExtra((prevMoster) => [...prevMoster, carta]);
+                toast.success(`"${carta.nombre}" se agregó al deck 🎉`)
                         break;
                     case "Synchro Monster":
-                        setExtra((prevMoster) => [...prevMoster, carta]);
+                setExtra((prevMoster) => [...prevMoster, carta]);
+                toast.success(`"${carta.nombre}" se agregó al deck 🎉`)
                         break;
                     case "Fusion Monster":
-                        setExtra((prevMoster) => [...prevMoster, carta]);
+                setExtra((prevMoster) => [...prevMoster, carta]);
+                toast.success(`"${carta.nombre}" se agregó al deck 🎉`)
                 break;
             case "Link Monster":
-                        setExtra((prevMoster) => [...prevMoster, carta]);
+                setExtra((prevMoster) => [...prevMoster, carta]);
+                toast.success(`"${carta.nombre}" se agregó al deck 🎉`)
                 break;
            
                  }
-                } else {alert("No puedes añadir más de 15 cartas a tu extra deck")}         
+                } else {toast.error("No puedes añadir más de 15 cartas a tu extra deck")}         
     };
 
     const borrar = () => {

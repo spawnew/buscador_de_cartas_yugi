@@ -10,6 +10,8 @@ import Deck from './Componentes/Fav/Deck';
 import AOS from "aos";
 import { useEffect } from 'react';
 import 'aos/dist/aos.css';
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   useEffect(() => {
@@ -39,7 +41,15 @@ function App() {
           <Route path='/nosotros' element={<Nosotros />} />
 
         </Routes>
-
+  <ToastContainer 
+            position="top-right"
+            autoClose={1000}
+            hideProgressBar={true}
+            closeOnClick
+            pauseOnHover
+            draggable
+            theme="Black"
+          /> 
       </ThemeProvider>
 
   

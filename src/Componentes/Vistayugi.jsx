@@ -78,7 +78,7 @@ const {  añadir } = useContext(TemaContext)
 
   {load && dato.carta === null &&
             yugi1.slice(pagAct, pag).map(el => (
-      <Link to={`/detalle/${el.id}`}>
+    
       <div className="flex flex-col items-center p-2" key={el.id}>
         <Yugi
   id={el.id} 
@@ -91,7 +91,7 @@ const {  añadir } = useContext(TemaContext)
   type={el.type}
 />
       </div>
-                 </Link>
+                 
     ))
   }
 
