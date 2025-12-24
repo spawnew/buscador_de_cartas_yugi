@@ -43,6 +43,11 @@ useEffect(() => {
                         setMoster((prevMoster) => [...prevMoster, carta]);
                         toast.success(`"${carta.nombre}" se agregó al deck 🎉`)
                         break;
+                    case "Tuner Monster":
+                        setMoster((prevMoster) => [...prevMoster, carta]);
+                        toast.success(`"${carta.nombre}" se agregó al deck 🎉`)
+                        break;
+                    
                     case "Normal Monster":
                         setMoster((prevMoster) => [...prevMoster, carta]);
                         toast.success(`"${carta.nombre}" se agregó al deck 🎉`)
