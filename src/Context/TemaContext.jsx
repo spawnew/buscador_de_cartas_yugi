@@ -1,13 +1,39 @@
 import { createContext, useState } from "react";
-
+import { useEffect } from "react";
 export const TemaContext = createContext(null);
 
 export const ThemeProvider = ({ children }) => {
-    const [moster, setMoster] = useState([]);
-     const [magia, setMagia] = useState([]);
-    const [trampa, setTrampa] = useState([]);
-    const [extra, setExtra] = useState([]);
+   
+    const [moster, setMoster] = useState(() =>
+  JSON.parse(localStorage.getItem("moster")) || []
+);
 
+const [magia, setMagia] = useState(() =>
+  JSON.parse(localStorage.getItem("magia")) || []
+);
+
+const [trampa, setTrampa] = useState(() =>
+  JSON.parse(localStorage.getItem("trampa")) || []
+);
+
+const [extra, setExtra] = useState(() =>
+  JSON.parse(localStorage.getItem("extra")) || []
+);
+useEffect(() => {
+  localStorage.setItem("moster", JSON.stringify(moster));
+}, [moster]);
+
+useEffect(() => {
+  localStorage.setItem("magia", JSON.stringify(magia));
+}, [magia]);
+
+useEffect(() => {
+  localStorage.setItem("trampa", JSON.stringify(trampa));
+}, [trampa]);
+
+useEffect(() => {
+  localStorage.setItem("extra", JSON.stringify(extra));
+}, [extra]);
     const añadir = (carta) => {
         if (magia.length + trampa.length + moster.length <= 40) {
             {
@@ -52,9 +78,25 @@ export const ThemeProvider = ({ children }) => {
                 } else {alert("No puedes añadir más de 15 cartas a tu extra deck")}         
     };
 
+    const borrar = () => {
+    setExtra([]);
+    setMoster([]);
+    setMagia([]);
+    setTrampa([]);
+    
+    
+    }
+    const borrarCarta = (id) => {
+    setMoster(moster.filter((carta) => carta.id !== id));
+    setMagia(magia.filter((carta) => carta.id !== id));
+    setTrampa(trampa.filter((carta) => carta.id !== id));
+    setExtra(extra.filter((carta) => carta.id !== id));
+    }
+
     const carta = {
-      añadir, moster, magia, trampa,extra
+      añadir, moster, magia, trampa,extra,borrar ,borrarCarta
     };
+    
 
     return (
         <TemaContext.Provider value={carta}>

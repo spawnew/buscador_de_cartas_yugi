@@ -64,7 +64,7 @@ const {  añadir } = useContext(TemaContext)
         }}
         className="mt-2 bg-amber-900 text-amber-100 font-bold px-4 rounded text-md  hover:bg-amber-600 leading-none p-2"
       >
-        Añadir favoritos
+        Añadir al deck
       </button>
                     </div>
                 </div>

@@ -6,7 +6,7 @@ const Navbar = () => {
   
   return (
     <div className="flex flex-col items-center  w-full">
-    <div className="flex flex-row justify-between border-amber-300  p-1 bg-gradient-to-r from-amber-950 via-black to-amber-950 w-full">
+    <div className="flex md:flex-row flex-col justify-between border-amber-300  p-1 bg-gradient-to-r from-amber-950 via-black to-amber-950 w-full">
       
       <div className="md:col-span-1 flex justify-center">
         <Link to="/">

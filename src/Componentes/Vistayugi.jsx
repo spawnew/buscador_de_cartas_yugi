@@ -77,7 +77,8 @@ const {  añadir } = useContext(TemaContext)
   {!load && <p className="text-amber-100">Cargando...</p>}
 
   {load && dato.carta === null &&
-    yugi1.slice(pagAct, pag).map(el => (
+            yugi1.slice(pagAct, pag).map(el => (
+      <Link to={`/detalle/${el.id}`}>
       <div className="flex flex-col items-center p-2" key={el.id}>
         <Yugi
   id={el.id} 
@@ -89,25 +90,19 @@ const {  añadir } = useContext(TemaContext)
   añadir={añadir}
   type={el.type}
 />
-       <Link to={`/detalle/${el.id}`}>
-          <button className="m-3 p-2 rounded-xl bg-black
-                             border border-amber-900 hover:bg-amber-800">
-            Detalle
-          </button>
-            </Link>
-            
-        
       </div>
+                 </Link>
     ))
   }
 
   {load && dato.carta !== null &&
   yugi1
     .filter(el =>
-      el.name === dato.carta ||
+      (el.name === dato.carta ||
       el.archetype === dato.carta ||
         el.race === dato.carta||
         el.type === dato.type
+      )
     )
     .map(el => (
       <div className="flex flex-col items-center p-2" key={el.id}>
@@ -121,12 +116,7 @@ const {  añadir } = useContext(TemaContext)
                 type={el.type}
           añadir={añadir}     
         />
-        <Link to={`/detalle/${el.id}`}>
-          <button className="m-3 p-2 rounded-xl border border-amber-300
-                             hover:border-amber-600">
-            Detalle
-          </button>
-        </Link>
+      
       </div>
     ))
 }
