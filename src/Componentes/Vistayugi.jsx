@@ -96,12 +96,11 @@ const {  añadir } = useContext(TemaContext)
   }
 
   {load && dato.carta !== null &&
-  yugi1
-    .filter(el =>
-      (el.name === dato.carta ||
-      el.archetype === dato.carta ||
-        el.race === dato.carta||
-        el.type === dato.type
+  yugi1.filter(el =>
+      (el.name.includes (dato.carta) ||
+    el.archetype === dato.carta
+   
+       
       )
     )
     .map(el => (
